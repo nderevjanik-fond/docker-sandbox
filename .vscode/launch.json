@@ -1,7 +1,7 @@
 {
   "configurations": [
     {
-      "name": "Docker: Attach to Node",
+      "name": "Docker: Attach to Node Web App",
       "type": "node",
       "request": "attach",
       "localRoot": "${workspaceFolder}/node-web-app",
