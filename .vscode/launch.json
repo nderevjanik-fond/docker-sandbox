@@ -1,6 +1,13 @@
 {
   "configurations": [
     {
+      "name": "Docker: Attach to Node",
+      "type": "node",
+      "request": "attach",
+      "localRoot": "${workspaceFolder}/node-web-app",
+      "remoteRoot": "/usr/src/app",
+    },
+    {
       "name": "Docker Node.js Launch",
       "type": "docker",
       "request": "launch",
