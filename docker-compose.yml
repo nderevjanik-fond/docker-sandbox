@@ -1,0 +1,11 @@
+services:
+  nodewebapp:
+    image: nodewebapp
+    build:
+      context: node-web-app
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: production
+    ports:
+      - 3000:3000
+    command: ["yarn", "start"]
