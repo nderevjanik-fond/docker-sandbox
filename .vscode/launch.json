@@ -7,16 +7,5 @@
       "localRoot": "${workspaceFolder}/node-web-app",
       "remoteRoot": "/usr/src/app",
     },
-    {
-      "name": "Docker Node.js Launch",
-      "type": "docker",
-      "request": "launch",
-      "preLaunchTask": "docker-run: debug",
-      "platform": "node",
-      "node": {
-        "package": "${workspaceFolder}/node-web-app/package.json",
-        "localRoot": "${workspaceFolder}/node-web-app"
-      }
-    }
   ]
 }
