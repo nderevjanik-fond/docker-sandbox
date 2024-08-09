@@ -3,7 +3,8 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.get("/", (req, res) => {
-  res.send("Hello from Dockerized Node.js app!");
+  const environment = process.env["NODE_ENV"].toUpperCase();
+  res.send(`(${environment}) Hello from Dockerized Node.js app!`);
 });
 
 app.listen(port, () => {
