@@ -1,6 +1,6 @@
 services:
-  nodewebapp:
-    image: nodewebapp
+  node-web-app:
+    image: node-web-app
     build:
       context: node-web-app
       dockerfile: ./Dockerfile
@@ -8,4 +8,15 @@ services:
       NODE_ENV: production
     ports:
       - 3000:3000
+    command: ["yarn", "start"]
+
+  node-web-api:
+    image: node-web-api
+    build:
+      context: node-web-api
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: production
+    ports:
+      - 3001:3000
     command: ["yarn", "start"]

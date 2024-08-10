@@ -1,0 +1,13 @@
+{
+  "name": "node-web-app",
+  "version": "0.0.0",
+  "description": "A simple NodeJS web app.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "start:debug": "node --inspect=0.0.0.0:9229 index.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
