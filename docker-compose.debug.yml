@@ -9,6 +9,8 @@ services:
     ports:
       - 3000:3000
       - 9229:9229
+    volumes:
+      - ./node-web-app/index.js:/usr/src/app/index.js
     command: ["yarn", "start:debug"]
     
   node-web-api:
@@ -21,4 +23,6 @@ services:
     ports:
       - 3001:3000
       - 9230:9229
+    volumes:
+      - ./node-web-api/index.js:/usr/src/app/index.js
     command: ["yarn", "start:debug"]
