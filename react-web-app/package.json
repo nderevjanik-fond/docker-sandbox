@@ -1,7 +1,7 @@
 {
-  "name": "node-web-app",
+  "name": "react-web-app",
   "version": "0.0.0",
-  "description": "A simple NodeJS web app.",
+  "description": "A simple React web app.",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
