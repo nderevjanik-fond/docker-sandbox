@@ -1,26 +1,26 @@
 services:
-  node-web-app:
-    image: node-web-app
+  react-web-app:
+    image: react-web-app
     build:
-      context: node-web-app
+      context: react-web-app
       dockerfile: ./Dockerfile
     environment:
       NODE_ENV: production
     ports:
       - 3000:3000
     volumes:
-      - ./node-web-app/index.js:/usr/src/app/index.js
+      - ./react-web-app/index.js:/usr/src/app/index.js
     command: ["yarn", "start"]
 
-  node-web-api:
-    image: node-web-api
+  node-service:
+    image: node-service
     build:
-      context: node-web-api
+      context: node-service
       dockerfile: ./Dockerfile
     environment:
       NODE_ENV: production
     ports:
       - 3001:3000
     volumes:
-      - ./node-web-api/index.js:/usr/src/app/index.js
+      - ./node-service/index.js:/usr/src/app/index.js
     command: ["yarn", "start"]

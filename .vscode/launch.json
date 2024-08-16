@@ -1,18 +1,18 @@
 {
   "configurations": [
     {
-      "name": "Docker: Attach to Node Web App",
+      "name": "Docker: Attach to React Web App",
       "type": "node",
       "request": "attach",
-      "localRoot": "${workspaceFolder}/node-web-app",
+      "localRoot": "${workspaceFolder}/react-web-app",
       "remoteRoot": "/usr/src/app",
       "port": 9229,
     },
     {
-      "name": "Docker: Attach to Node Web API",
+      "name": "Docker: Attach to Node Service",
       "type": "node",
       "request": "attach",
-      "localRoot": "${workspaceFolder}/node-web-api",
+      "localRoot": "${workspaceFolder}/node-service",
       "remoteRoot": "/usr/src/app",
       "port": 9230,
     },
