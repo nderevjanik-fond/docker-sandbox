@@ -9,28 +9,28 @@ A sandbox for experimenting with docker.
 
 ### Development / Debug
 
-VSCode debugging is built-in:
-1. Start the Node Web App in debug mode (note the use of a `debug` docker-compose file)
-1. Add breakpoint(s) in VSCode
-1. Launch "Docker: Attach to Node Web App" (from VSCode's `Run and Debug` view)
-1. Use the Node Web App so that it triggers the breakpoint(s)
+1. Start the application in debug mode (note the use of a `debug` docker-compose file)
+1. Identify a ***component*** (node-service, react-web-app, etc) that you'd like to debug
+1. Add breakpoints in VSCode
+1. Launch "Docker: Attach to ***component***" (from VSCode's `Run and Debug` view)
+1. Use the application so that it triggers the breakpoints
 
 ```sh
-# Start and use the Node Web App in debug mode
+# Start and use the application in debug mode
 > docker compose -f "docker-compose.debug.yml" up -d --build
 > curl localhost:3000
 
-# Stop the Node Web App
+# Stop the application
 > docker compose -f "docker-compose.debug.yml" down
 ```
 
 ### Production
 
 ```sh
-# Start and use the Node Web App
+# Start and use the application
 > docker compose -f "docker-compose.yml" up -d --build
 > curl localhost:3000
 
-# Stop the Node Web App
+# Stop the application
 > docker compose -f "docker-compose.yml" down
 ```
