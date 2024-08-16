@@ -1,17 +1,4 @@
 services:
-  react-web-app:
-    image: react-web-app
-    build:
-      context: react-web-app
-      dockerfile: ./Dockerfile
-    environment:
-      NODE_ENV: production
-    ports:
-      - 3000:3000
-    volumes:
-      - ./react-web-app/index.js:/usr/src/app/index.js
-    command: ["yarn", "start"]
-
   node-service:
     image: node-service
     build:
@@ -23,4 +10,17 @@ services:
       - 3001:3000
     volumes:
       - ./node-service/index.js:/usr/src/app/index.js
+    command: ["yarn", "start"]
+
+  react-web-app:
+    image: react-web-app
+    build:
+      context: react-web-app
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: production
+    ports:
+      - 3000:3000
+    volumes:
+      - ./react-web-app/index.js:/usr/src/app/index.js
     command: ["yarn", "start"]

@@ -1,18 +1,4 @@
 services:
-  react-web-app:
-    image: react-web-app
-    build:
-      context: react-web-app
-      dockerfile: ./Dockerfile
-    environment:
-      NODE_ENV: development
-    ports:
-      - 3000:3000
-      - 9229:9229
-    volumes:
-      - ./react-web-app/index.js:/usr/src/app/index.js
-    command: ["yarn", "start:debug"]
-    
   node-service:
     image: node-service
     build:
@@ -25,4 +11,18 @@ services:
       - 9230:9229
     volumes:
       - ./node-service/index.js:/usr/src/app/index.js
+    command: ["yarn", "start:debug"]
+
+  react-web-app:
+    image: react-web-app
+    build:
+      context: react-web-app
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: development
+    ports:
+      - 3000:3000
+      - 9229:9229
+    volumes:
+      - ./react-web-app/index.js:/usr/src/app/index.js
     command: ["yarn", "start:debug"]
