@@ -1,7 +1,7 @@
 {
   "configurations": [
     {
-      "name": "Docker: Attach to Node Service",
+      "name": "Docker: Attach to node-service",
       "type": "node",
       "request": "attach",
       "localRoot": "${workspaceFolder}/node-service",
@@ -9,7 +9,7 @@
       "port": 9230,
     },
     {
-      "name": "Docker: Attach to React Web App",
+      "name": "Docker: Attach to react-web-app",
       "type": "node",
       "request": "attach",
       "localRoot": "${workspaceFolder}/react-web-app",
