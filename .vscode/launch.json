@@ -1,6 +1,14 @@
 {
   "configurations": [
     {
+      "name": "Attach to golang-service",
+      "type": "go",
+      "request": "attach",
+      "mode": "remote",
+      "debugAdapter": "dlv-dap",
+      "port": 9231,
+    },
+    {
       "name": "Docker: Attach to node-service",
       "type": "node",
       "request": "attach",
