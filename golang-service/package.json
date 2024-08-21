@@ -1,0 +1,10 @@
+{
+  "name": "golang-service",
+  "version": "0.0.0",
+  "description": "A simple Golang service.",
+  "main": "main.go",
+  "scripts": {
+    "start": "go run github.com/gravityblast/fresh",
+    "start:debug": "exit 1"
+  }
+}
