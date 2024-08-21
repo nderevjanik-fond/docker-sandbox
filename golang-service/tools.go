@@ -11,5 +11,6 @@
 package main
 
 import (
-	_ "github.com/gravityblast/fresh"
+	_ "github.com/go-delve/delve/cmd/dlv"
+	_ "github.com/air-verse/air"
 )

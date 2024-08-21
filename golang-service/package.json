@@ -4,7 +4,7 @@
   "description": "A simple Golang service.",
   "main": "main.go",
   "scripts": {
-    "start": "go run github.com/gravityblast/fresh",
+    "start": "go run github.com/air-verse/air",
     "start:debug": "exit 1"
   }
 }
