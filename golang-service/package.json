@@ -5,6 +5,6 @@
   "main": "main.go",
   "scripts": {
     "start": "go run github.com/air-verse/air",
-    "start:debug": "exit 1"
+    "start:debug": "go run github.com/air-verse/air -c .air-debug.toml"
   }
 }
