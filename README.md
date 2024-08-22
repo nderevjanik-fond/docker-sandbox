@@ -10,9 +10,9 @@ A sandbox for experimenting with docker.
 ### Development / Debug
 
 1. Start the application in debug mode (note the use of a `debug` docker-compose file)
-1. Identify a ***component*** (node-service, react-web-app, etc) that you'd like to debug
+1. Identify a ***component*** (golang-service, node-service, react-web-app, etc) that you'd like to debug
 1. Add breakpoints in VSCode
-1. Launch "Docker: Attach to ***component***" (from VSCode's `Run and Debug` view)
+1. Launch "Attach to ***component***" (from VSCode's `Run and Debug` view)
 1. Use the application so that it triggers the breakpoints
 
 ```sh
