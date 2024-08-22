@@ -5,4 +5,4 @@ tmp_dir = "tmp"
   args_bin = []
   bin = "./tmp/main"
   cmd = "go build -gcflags='all=-N -l' -o ./tmp/main ."
-  full_bin = "go run github.com/go-delve/delve/cmd/dlv exec --continue --accept-multiclient --log --headless --listen :9231 --api-version 2 ./tmp/main"
+  full_bin = "go run github.com/go-delve/delve/cmd/dlv exec --continue --accept-multiclient --log --headless --listen :4040 --api-version 2 ./tmp/main"
