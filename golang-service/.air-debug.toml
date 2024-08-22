@@ -1,0 +1,12 @@
+root = "."
+tmp_dir = "tmp"
+
+[build]
+  args_bin = []
+  bin = "./tmp/main"
+  
+  # Build without inline (-N) and link time (-l) optimizations, for debugging.
+  cmd = "go build -gcflags='all=-N -l' -o ./tmp/main ."
+  
+  # Start the debugger for VSCode (--api-version 2), allowing the app to run (--continue) and keep the debugger alive (--accept-multiclient --headless).
+  full_bin = "go run github.com/go-delve/delve/cmd/dlv exec --api-version 2 --continue --accept-multiclient --headless --log --listen :4040 ./tmp/main"

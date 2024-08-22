@@ -1,7 +1,21 @@
 {
   "configurations": [
     {
-      "name": "Docker: Attach to node-service",
+      "name": "Attach to golang-service",
+      "type": "go",
+      "request": "attach",
+      "mode": "remote",
+      "debugAdapter": "dlv-dap",
+      "substitutePath": [
+        {
+          "from": "${workspaceFolder}/golang-service",
+          "to": "/usr/src/app"
+        }
+      ],
+      "port": 9231,
+    },
+    {
+      "name": "Attach to node-service",
       "type": "node",
       "request": "attach",
       "localRoot": "${workspaceFolder}/node-service",
@@ -9,7 +23,7 @@
       "port": 9230,
     },
     {
-      "name": "Docker: Attach to react-web-app",
+      "name": "Attach to react-web-app",
       "type": "node",
       "request": "attach",
       "localRoot": "${workspaceFolder}/react-web-app",

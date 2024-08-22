@@ -1,4 +1,15 @@
 services:
+  golang-service:
+    image: golang-service
+    build:
+      context: golang-service
+      dockerfile: ./Dockerfile
+    ports:
+      - 3002:8080
+    volumes:
+      - ./golang-service:/usr/src/app
+    command: ["yarn", "start"]
+
   node-service:
     image: node-service
     build:
